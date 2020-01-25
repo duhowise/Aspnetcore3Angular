@@ -4,13 +4,9 @@
   var theForm = $("#theForm");
   theForm.hide();
 
-  var button = $("#buyButton");
-  button.on("click", function() {
-    alert("Buying Item");
-  });
-
-  var listItems = $(".product-props li");
-  listItems.on("click", function() {
+  
+  var productInfo = $(".product-props li");
+        productInfo.on("click", function() {
     console.log("you clicked on " + $(this).text());
   });
 
@@ -18,6 +14,14 @@
   var $popupForm = $(".popup-form");
 
   $loginToggle.on("click", function() {
-    $popupForm.toggle(100);
+    $popupForm.toggle(100 );
   });
+
+
+    var buyButton = $(".product-info button");
+    buyButton.on("click",
+        function() {
+
+            alert("Buying Item");
+        });
 });
